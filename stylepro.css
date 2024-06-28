@@ -106,7 +106,7 @@ main .intro{
     .skills .container {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        margin-left:50%;
+        margin-left:100%;
         gap: 50px;
        
     }
