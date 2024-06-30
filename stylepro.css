@@ -4,7 +4,8 @@ body{
     background-attachment: fixed;  
      box-sizing: border-box;
      scroll-behavior: smooth;
-   }
+
+}
 
 .nav-link:hover{
     
@@ -36,22 +37,23 @@ main .intro{
 }
 
 .skills{
+    width: 80%;
     margin-top: 80px;
     display: flex;
-    justify-content: space-evenly
+    margin-left: 10%;
 }
 
 
-.skills .container1{
+.skills .container{
     width: 40%;
     height: 300px;
     border: 2px solid rgb(83, 21, 227);
-    padding: 20px;
+    padding: 30px;
 }
 
-.skills .container{
-    display: flex;
-    justify-content: space-around;
+.skills .box{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 
@@ -64,8 +66,8 @@ main .intro{
 
 .skills #tools{
     display: flex;
-    justify-content: flex-start;
-    gap: 50px;
+    justify-content: center;
+    gap: 30px;
 }
 
 .card img{
@@ -82,9 +84,12 @@ main .intro{
 .education .card{
     width: 450px;
     color: white;
-    box-shadow: 0 0 5px rgb(125, 63, 239);
     border: 2px solid rgb(83, 21, 227);
-    background-color: rgb(33, 7, 73);
+    background-color: rgb(25, 6, 55);
+}
+
+.education p{
+    font-weight: 400;
 }
 
 .certificate .container{
@@ -106,16 +111,41 @@ main .intro{
 
 .aboutme{
     margin-top: 100px;
+    margin-left: 20%;
+    font-weight:300;
+    word-spacing: 5px;
 }
 
-.aboutme .para{
-    margin-left: 20%;
-    width: 60%;
-    padding: 20px;
-    box-shadow: 0 0 5px rgb(125, 63, 239);
-    border: 2px solid rgb(83, 21, 227);
-    background-color: rgb(33, 7, 73);
+.aboutme .content{
+    padding: 0px 30px;
+    border-left: 2px solid rgb(83, 21, 227);
+}
 
+.aboutme .content .para{
+    width: 900px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid rgb(83, 21, 227);
+    background-color: rgb(25, 6, 55);
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+.aboutme .content .para:hover{
+    box-shadow: 0px 3px 12px 0px rgb(125, 63, 239);
+    border: 1px solid transparent;
+}
+
+.aboutme .content .para::before{
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      right: calc(100% + 22px);
+      top:0;
+      background-color: rgb(83, 21, 227);
+      border: 2px solid rgb(83, 21, 227);
 }
 
 .form-group , .btn {
@@ -174,18 +204,27 @@ main .intro{
 
 
 
-@media(max-width:480px) {
+@media(max-width:980px) {
 
     body{
-        margin: 0%;
-        font-size: 15px;
-        overflow: hidden;
+        max-width: 100%;
+        margin: 0.5% ;
+        padding: 0px;
+        font-size: 16px;
+        font-family: 'Times New Roman', Times, serif;
+        line-height: 30px;
+        word-spacing: 2.5px;
+        margin-right: 0px;
     }
 
    .intro{
-     margin: 0%;
-     width: 300px;
+     width: 500px;
+     font-size: 15px;
    }  
+
+   .fs-5{
+    font-size:x-large;
+   }
 
    .skills{
      margin-top: 50px;
@@ -195,14 +234,17 @@ main .intro{
      row-gap: 40px;
    }
   
-    .skills .container1{
+    .skills .container{
        
-         width: 500px;
+         width: 700px;
     }
 
-    .skills .container{
-        margin-top: 20px;
+    .skills .box{
+          margin-left: 50px;
     } 
+    .skills #tools{
+        margin: 20px;
+    }
 
     h2{
        margin-left: 100%;
