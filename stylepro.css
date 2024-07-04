@@ -257,14 +257,14 @@ main .intro{
     font-size:40px;
   }
   .intro #p1{
-    font-size: 60px;
+    font-size: 65px;
     font-weight: 500;
   }
   .intro #p3{
-    font-size: 35px;
+    font-size: 45px;
    }
   .intro #p2{
-    font-size: 25px
+    font-size: 35px
   }
   #btn{
     height: 80px;
