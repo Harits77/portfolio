@@ -31,7 +31,7 @@
                <a class="nav-link text-white" href="#aboutme">About me</a>
              </li>
              <li class="nav-item">
-              <a class="nav-link text-white" href="#contact">Contact me</a>
+              <a class="nav-link text-white" href="#project">Project</a>
             </li>
            
               </div>
@@ -44,7 +44,8 @@
 
   
    <section class="intro" id="home">
-    <p class="text-white" id="p1"> Hi I am <span id="element">Hariharan</span></p>
+    <p class="text-white" id="p1"> Hi I am <span>Hariharan</span></p>
+    <p class="text-white" id="p3">I am <span id="element"></span></p>
     <p class="text-white" id="p2">A highly motivated student and seeking a challenging position in field where I can
       utilize my specific skills to contribute to the success of the company and further develop
       my career</p>
@@ -61,11 +62,11 @@
     <h2 class="text-white text-center" id="sk">Skills</h2>
     <div class="skills" >
  
-     <div class="container ">
+     <div class="container">
      
      <h3 class="text-white text-center"><span style="text-shadow: 0 0 5px aqua;">Technical</span></h3>
  
-     <div class="box">
+     <div class="box" style="padding-left: 20px;">
      
      <div class="card">
      <img src="html.jpg" alt="">
@@ -126,25 +127,28 @@
       </div>
    </section>
 
-    <section class="certificate">
+   <section class="aboutme" id="aboutme">
+    <div class="para">
+      <h2><span>About Me</span></h2>
+          <p>Greetings! I'm Hariharan, a driven web developer proficient in HTML, CSS, JavaScript, and adept in React.js.
+           I excel in designing and developing user-friendly interfaces that seamlessly blend creativity with functionality.
+          With a passion for innovation, I leverage React.js to create dynamic and responsive web applications. 
+          I thrive on solving challenges and delivering high-quality web solutions.
+          I am eager to collaborate on projects that push the boundaries of digital experiences and make a meaningful impact. 
+          Let's create something remarkable together!</p>
+      </div>
+   </section>
 
-      <h2 class="text-white text-center" style="margin-top: 100px;">certificate</h2>
-  
-      <div class="container">
-        
-      
-      <div class="card">
-      <img src="dbms.jpg" alt="">
+   <section class="project" id="project">
+     <h2 class="text-center text-white">Proiect</h2>
+      <div class="pro">
+         <div class="card">
+            <img src="html.jpg" alt="">
+         </div>
       </div>
-      <div class="card">
-      <img src="advanced html.jpg" alt="">
-      </div>
-      <div class="card">
-      <img src="IOT.jpg" alt="">
-      </div>
-       
-      </div>
-     </section>
+
+
+   </section>
 
 
   
@@ -162,7 +166,7 @@ window.onload = function() {
   window.scrollTo(0, 0);
 }
   var typed = new Typed('#element', {
-    strings: ['Hariharan.','frontend devolper.'],
+    strings: ['Frontend Devolper.'],
     typeSpeed: 100,backSpeed : 15,
     loop : true
   });
