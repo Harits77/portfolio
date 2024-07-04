@@ -205,6 +205,10 @@ main .intro{
   .project{
     margin-top: 100px;
   }
+  .project h2{
+    margin-left: 45%;
+    font-weight: 600;
+  }
   .project .card{
     margin-left: 36%;
     width: 400px;
@@ -246,9 +250,6 @@ main .intro{
   nav ul{
     background-color: var(--main-color); 
   }
-  section{
-    padding: 10px;
-  }
   main .intro{
     width: 750px;
   }
@@ -280,7 +281,7 @@ main .intro{
   
   #skills{
     background-color: var(--second-color);
-    width:970px;
+    width:1000px;
     
   }
   .skills{
@@ -333,7 +334,7 @@ main .intro{
     margin-top: 100px;
   }
  .aboutme{
-  width: 950px;
+  width: 1000px;
   height: 700px;
  } 
  .aboutme .para{
@@ -342,6 +343,19 @@ main .intro{
   font-weight: 400;
   margin-left: 10%;
  }
+
+.project{
+  margin-left: 50%;
+}
+ .project h2{
+  margin-left: 100%;
+  font-size:50px;
+}
+
+.project .card img{
+  height: 300px;
+  width: 400px;
+}
  
 }
   
