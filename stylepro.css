@@ -1,19 +1,19 @@
 body{
-    background:linear-gradient(rgb(14, 1, 33),rgb(21, 4, 49),rgb(28, 6, 67));
+    background:linear-gradient(#151925,#151925);
     background-repeat: no-repeat;   
     background-attachment: fixed;  
      box-sizing: border-box;
      scroll-behavior: smooth;
-  
-  
-  }
-  
-  nav a:hover{
-    color: rgb(255, 72, 0); 
-  }
+}
+
+:root{
+   --bg-color: rgb(18, 207, 240);
+   --main-color:#151925;
+   --second-color:#323846;
+}
   
   nav{
-   background-color: rgb(25, 3, 49);
+   background-color:var(--main-color);
    position: fixed;
   }
   
@@ -22,27 +22,54 @@ body{
     width: 180px;
     height: 50px;
     border-radius: 10px;
-    background: linear-gradient(to right bottom,rgb(63, 3, 160),rgb(85, 31, 172),rgb(107, 59, 185));
-    color: white;
-    margin-top: 10px;
-    border: 2px solid rgb(83, 21, 227);
+    background-color: var(--bg-color) ;
+    margin-top: 20px;
+    border: 2px solid var(--bg-color);
   }
+  
   
   main .intro{
     width: 600px;
-    margin-top: 300px;
+    margin-top: 250px;
     animation: moving ;
     position: relative;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    font-size: 20px;
+    font-size: 25px;
   
   }
   
   .intro #p1{
-    font-size: 35px;
+    font-size: 40px;
   }
-  
+  .intro #p2{
+    margin-top: 25px;
+  }
+  .icons{
+    display: flex;
+    margin-top: 25px;
+    column-gap: 20px;
+  }
+  .icons box-icon{
+   height: 50px;
+   width: 50px;
+   background-color:var(--bg-color);
+   padding:10px ;
+   border-radius: 50%;
+  }
+
+  .icons box-icon:hover{
+    box-shadow: 0 0 20px var(--bg-color);
+    scale: 1.1;
+  }
+ 
+  #skills{
+    background-color: var(--second-color);
+    padding-bottom:80px;
+    padding-top: 40px;
+    margin-top: 100px;
+  }
+
   .skills{
     width: 80%;
     margin-top: 80px;
@@ -54,7 +81,7 @@ body{
   .skills .container{
     width: 40%;
     height: 300px;
-    border: 2px solid rgb(83, 21, 227);
+    border: 2px solid var(--bg-color);
     padding: 30px;
     border-radius: 30px;
   }
@@ -86,24 +113,6 @@ body{
     height: 58px;
   }
   
-  .education{
-    margin-top: 50px;
-    display: flex;
-    margin-left: 18%;
-    gap: 50px;
-  }
-  
-  .education .card{
-    width: 450px;
-    color: white;
-    border: 2px solid rgb(83, 21, 227);
-    background-color: rgb(25, 6, 55);
-  }
-  
-  .education p{
-    font-weight: 400;
-    font-size: 20px;
-  }
   
   .certificate .container{
     display: flex;
@@ -121,35 +130,36 @@ body{
   .certificate .card img{
     height: 200px;
   }
-  
-  .aboutme{
+
+  .education{
     margin-top: 100px;
     margin-left: 20%;
     font-weight:300;
     word-spacing: 5px;
+    
   }
   
-  .aboutme .content{
+  .education .content{
     padding: 0px 30px;
-    border-left: 2px solid rgb(83, 21, 227);
+    border-left: 2px solid rgb(18, 207, 240);
   }
   
-  .aboutme .content .para{
-    width: 900px;
+  .education .content .para{
+    width: 700px;
     position: relative;
     padding: 20px;
-    border: 1px solid rgb(83, 21, 227);
-    background-color: rgb(25, 6, 55);
+    border: 1px solid rgb(18, 207, 240);
+    background-color:#151925;
     cursor: pointer;
     transition: all 0.4s;
   }
   
-  .aboutme .content .para:hover{
-    box-shadow: 0px 3px 12px 0px rgb(125, 63, 239);
+  .education .content .para:hover{
+    box-shadow: 0px 3px 12px 0px rgb(18, 207, 240);
     border: 1px solid transparent;
   }
   
-  .aboutme .content .para::before{
+  .education .content .para::before{
       content: '';
       position: absolute;
       width: 16px;
@@ -157,11 +167,20 @@ body{
       border-radius: 50%;
       right: calc(100% + 22px);
       top:0;
-      background-color: rgb(83, 21, 227);
-      border: 2px solid rgb(83, 21, 227);
+      background-color:rgb(18, 207, 240);
+      border: 2px solid rgb(18, 207, 240);
   }
   
-  
+  .education h3{
+    padding-bottom:15px;
+  }
+  .education p{
+    font-size: 20px;
+    font-weight: 400;
+  }
+  span{
+    color: aqua;
+  }
   @keyframes moving{
    100%{
       margin-left: 20%;
@@ -193,16 +212,30 @@ body{
   nav ul{
     background-color: rgb(25, 3, 49); 
   }
-  .intro{
-    width: 900px;
+  main .intro{
+    width: 750px;
   }
   .intro p{
     font-size:40px;
   }
   .intro #p1{
-    font-size: 55px;
+    font-size: 60px;
+    font-weight: 500;
+  }
+  #btn{
+    height: 80px;
+    width: 250px;
+  }
+  .icons box-icon{
+    height: 70px;
+    width: 70px;
+    margin-top: 20px;
   }
   
+  #skills{
+    background-color: var(--second-color);
+    width:970px;
+  }
   .skills{
     display: grid;
     grid-template-columns: 1fr;
@@ -211,13 +244,9 @@ body{
   .skills .container{
     width: 800px;
     height: 500px;
-    
-  }
-  
+   }
   #sk{
     font-size: 60px;
-    margin-left: 95%;
-  
   }
   .box .card{
     width:180px;
@@ -237,42 +266,24 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding-left: 20px;
+    background-color: var(#323846);
   }
   .skills h3{
     font-size: 40px;
   }
-  
   .education{
-    display: grid;
-    grid-template-columns: 1fr;
-    
-    line-height: 60px;
-  }
-  .education .card{
-    width: 800px;
+    margin-left: 30%;
   }
   .education p{
-    font-size: 35px;
+    font-size: 32px;
   }
   .education h3{
-    font-size: 40px;
+    font-size: 35px;
   }
-  #ed{
-    font-size: 60px;
-    margin-left: 80%;
-    margin-top: 200px;
-  }
-  
-  .aboutme .content .para{
-    width: 700px;
-    height: 400px;
-    font-size: 30px;
-  }
-  
   #jo{
     font-size: 60px;
     margin-left: 80%;
-    margin-top: 200px;
+    margin-top: 100px;
   }
   
   
