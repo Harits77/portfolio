@@ -3,6 +3,13 @@ body{
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
+section{
+  scroll-margin-top: 100px; 
+}
+
+main .intro{
+  scroll-margin-top:300px;
+}
 
 :root{
    --bg-color: rgb(18, 207, 240);
@@ -14,6 +21,14 @@ body{
    background-color:var(--main-color);
    position: fixed;
   }
+
+  nav li{
+    font-size: 25px;
+  }
+
+  nav ul li:hover{
+     color: var(--bg-color);
+  }
   
   
   #btn{
@@ -23,6 +38,8 @@ body{
     background-color: var(--bg-color) ;
     margin-top: 20px;
     border: 2px solid var(--bg-color);
+    font-weight: 400px;
+    font-size: 20px;
   }
   
   
@@ -33,24 +50,26 @@ body{
     position: relative;
     animation-duration: 2s;
     animation-fill-mode: forwards;
-    font-size: 25px;
+    font-size: 20px;
   
   }
-  
   .intro #p1{
-    font-size: 40px;
+    font-size: 45px;
   }
   .intro #p2{
     margin-top: 25px;
   }
+  .intro #p3{
+   font-size: 35px;
+  }
   .icons{
     display: flex;
     margin-top: 25px;
-    column-gap: 20px;
+    column-gap: 30px;
   }
   .icons box-icon{
-   height: 50px;
-   width: 50px;
+   height: 40px;
+   width: 40px;
    background-color:var(--bg-color);
    padding:10px ;
    border-radius: 50%;
@@ -63,14 +82,14 @@ body{
  
   #skills{
     background-color: var(--second-color);
-    padding-bottom:80px;
-    padding-top: 40px;
+    padding-bottom:100px;
+    padding-top: 60px;
     margin-top: 100px;
   }
 
   .skills{
     width: 80%;
-    margin-top: 80px;
+    margin-top: 50px;
     display: flex;
     margin-left: 10%;
   }
@@ -111,35 +130,17 @@ body{
     height: 58px;
   }
   
-  
-  .certificate .container{
-    display: flex;
-    width: 80%;
-    justify-content: space-around;
-    margin-top: 50px;
-    border: 2px solid rgb(83, 21, 227);
-    padding: 50px;
-  }
-  
-  .certificate .card{
-    width: 19rem;
-  }
-  
-  .certificate .card img{
-    height: 200px;
-  }
-
   .education{
-    margin-top:50px;
+    margin-top:80px;
     margin-left: 25%;
     font-weight:300;
     word-spacing: 5px;
-    
   }
   
   .education .content{
     padding: 0px 30px;
     border-left: 2px solid rgb(18, 207, 240);
+    margin-top:-10px ;
   }
   
   .education .content .para{
@@ -182,9 +183,41 @@ body{
   span{
     color: aqua;
   }
+   
+  .aboutme{
+    background-color: #323846;
+    color: white;
+    height: 550px;
+    margin-top: 100px;
+  }
+  .aboutme .para{
+    width: 40%;
+    font-size: 20px; 
+    padding-top:80px;
+    margin-left: 15%;
+  }
+  .aboutme .para p{
+    padding-top: 50px;
+  }
+  .aboutme .para h2{
+    font-size: 50px;
+  }
+  .project{
+    margin-top: 100px;
+  }
+  .project .card{
+    margin-left: 36%;
+    width: 400px;
+    height: 300px;
+    margin-top: 50px;
+  }
+  .project .card img{
+    height: 300px;
+  }
+
   @keyframes moving{
    100%{
-      margin-left: 20%;
+      margin-left: 15%;
    }
   }
   
@@ -226,14 +259,22 @@ body{
     font-size: 60px;
     font-weight: 500;
   }
+  .intro #p3{
+    font-size: 35px;
+   }
+  .intro #p2{
+    font-size: 25px
+  }
   #btn{
     height: 80px;
     width: 300px;
     font-size: 30px;
+    font-weight: 400px;
+  
   }
   .icons box-icon{
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     margin-top: 20px;
   }
   
@@ -291,14 +332,16 @@ body{
     margin-left: 80%;
     margin-top: 100px;
   }
-  
-  
-  
-  .certificate .container{
-    width: 800px;
-    margin-left: 25%;
-    column-gap: 30px;
-  }
-  
-  }
+ .aboutme{
+  width: 950px;
+  height: 700px;
+ } 
+ .aboutme .para{
+  width: 80%;
+  font-size: 28px;
+  font-weight: 400;
+  margin-left: 10%;
+ }
+ 
+}
   
