@@ -17,19 +17,38 @@ main .intro{
    --second-color:#323846;
 }
   
-  nav{
-   background-color:var(--main-color);
-   position: fixed;
-  }
+nav {
+  background-color: var(--main-color);
+  position: fixed;
+}
 
-  nav li{
-    font-size: 25px;
-  }
+.navbar-nav .nav-link {
+  color: white !important; 
+}
 
-  nav ul li:hover{
-     color: var(--bg-color);
-  }
-  
+nav li {
+  font-size: 25px;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::before {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: aqua;
+  transition: all 0.5s;
+}
+
+nav a:hover::before {
+  width: 100%;
+}
+
   
   #btn{
     width: 180px;
@@ -38,7 +57,7 @@ main .intro{
     background-color: var(--bg-color) ;
     margin-top: 20px;
     border: 2px solid var(--bg-color);
-    font-weight: 400px;
+    font-weight: 400;
     font-size: 20px;
   }
   
@@ -62,29 +81,12 @@ main .intro{
   .intro #p3{
    font-size: 35px;
   }
-  .icons{
-    display: flex;
-    margin-top: 25px;
-    column-gap: 30px;
-  }
-  .icons box-icon{
-   height: 40px;
-   width: 40px;
-   background-color:var(--bg-color);
-   padding:10px ;
-   border-radius: 50%;
-  }
 
-  .icons box-icon:hover{
-    box-shadow: 0 0 20px var(--bg-color);
-    scale: 1.1;
-  }
- 
   #skills{
     background-color: var(--second-color);
     padding-bottom:100px;
     padding-top: 60px;
-    margin-top: 100px;
+    margin-top: 140px;
   }
 
   .skills{
@@ -133,7 +135,7 @@ main .intro{
   .education{
     margin-top:80px;
     margin-left: 25%;
-    font-weight:300;
+    font-weight:200;
     word-spacing: 5px;
   }
   
@@ -191,48 +193,93 @@ main .intro{
     margin-top: 100px;
   }
   .aboutme .para{
-    width: 40%;
-    font-size: 20px; 
-    padding-top:80px;
-    margin-left: 15%;
+    width: 50%;
+    font-size: 21px; 
+    padding-top:70px;
+    animation: magic;
+    animation-timeline:view() ;
+    animation-duration: 3s;
+    animation-range: entry cover 70%;
+    animation-fill-mode: forwards;
   }
   .aboutme .para p{
-    padding-top: 50px;
+    padding-top: 40px;
+    font-weight:400;    
   }
   .aboutme .para h2{
     font-size: 50px;
   }
-  .project{
-    margin-top: 100px;
-  }
-  .project h2{
-    margin-left: 45%;
-    font-weight: 600;
-  }
-  .project .card{
-    margin-left: 36%;
-    width: 400px;
-    height: 300px;
-    margin-top: 50px;
-  }
-  .project .card img{
-    height: 300px;
-  }
 
-  @keyframes moving{
-   100%{
-      margin-left: 15%;
-   }
-  }
-  
   @keyframes magic {
     0%{
         opacity: 0;
     }
     100%{
         opacity: 1;
+        margin-left: 15%;
     }
-    
+  }
+  .project{
+    margin-top: 90px;
+  }
+  .project h2{
+    margin-left: 45%;
+    font-weight: 600;
+  }
+  .project .card{
+    margin-left: 39%;
+    width: 300px;
+    height: 250px;
+    margin-top: 50px;
+  }
+  .project .card img{
+    height: 250px;
+  }
+  .project .card-body{
+    border:2px solid var(--bg-color);
+  }
+  .project .btn{
+    background-color: var(--bg-color);
+    font-weight: bold;
+  }
+  footer{
+   margin-top: 300px;
+   background-color: var(--second-color);
+   padding-bottom:1px ;
+   padding-top: 15px;
+  }
+  footer h5{
+    color: white;
+    margin-left: 46%;
+  }
+  .icons{
+    margin-left:39%;
+    display: flex;
+    column-gap: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .icons box-icon{
+   height: 40px;
+   width: 40px;
+   background-color:var(--bg-color);
+   padding:10px ;
+   border-radius: 50%;
+   }
+   .icons p{
+    color: var(--bg-color);
+    margin-top: 5px;
+   }
+
+  .icons box-icon:hover{
+    box-shadow: 0 0 20px var(--bg-color);
+    scale: 1.1;
+  }
+
+  @keyframes moving{
+   100%{
+      margin-left: 15%;
+   }
   }
   
   @media (max-width:980px){
@@ -343,18 +390,64 @@ main .intro{
   font-weight: 400;
   margin-left: 10%;
  }
+ @keyframes magic {
+  0%{
+      opacity: 0;
+  }
+  100%{
+      opacity: 1;
+      margin-left: 10%;
+  }
+}
 
 .project{
   margin-left: 50%;
 }
- .project h2{
-  margin-left: 100%;
-  font-size:50px;
+.project h2{
+   font-size: 55px;
+   margin-left: 230px;
 }
-
+.project h5{
+  font-size: 30px;
+}
+.project p{
+  font-size: 25px;
+}
+.project .card{
+  height: 300px;
+  width: 400px;
+  margin-left: 110px;
+}
+.project .card-body{
+  width: 400px;
+  height: 400px;
+}
+.project .btn{
+   width: 150px;
+   height: 50px;
+   font-size: 20px;
+   font-weight: bold;
+}
 .project .card img{
   height: 300px;
   width: 400px;
+}
+
+footer{
+  width: 1000px;
+}
+.icon-wrap{
+  margin-left: -10%;
+}
+.icon-wrap h5 {
+  font-size: 35px;
+}
+.icon-wrap p{
+  margin-top: 30px;
+  font-size: 25px;
+}
+.icons{
+  margin-left: 35%;
 }
  
 }
