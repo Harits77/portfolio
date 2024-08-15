@@ -1,454 +1,639 @@
 body{
-    background:linear-gradient(#151925,#151925);
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  background:linear-gradient(#151925,#151925);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 section{
-  scroll-margin-top: 100px; 
+scroll-margin-top: 100px; 
 }
 
 main .intro{
-  scroll-margin-top:300px;
+scroll-margin-top:300px;
 }
 
 :root{
-   --bg-color: rgb(18, 207, 240);
-   --main-color:#151925;
-   --second-color:#323846;
+ --bg-color: rgb(18, 207, 240);
+ --main-color:#151925;
+ --second-color:#323846;
 }
-  
+
 nav {
-  background-color: var(--main-color);
-  position: fixed;
+background-color: var(--main-color);
+position: fixed;
+height: 70px;
 }
 
 .navbar-nav .nav-link {
-  color: white !important; 
+color: white !important; 
+}
+
+nav ul{
+  margin-left: 19%;
 }
 
 nav li {
-  font-size: 25px;
+font-size: 25px;
+padding: 15px;
 }
 
 nav a {
-  position: relative;
+position: relative;
 }
 
 nav a::before {
-  content: "";
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 0;
-  height: 3px;
-  background-color: aqua;
-  transition: all 0.5s;
+content: "";
+position: absolute;
+bottom: -10px;
+left: 0;  
+width: 0;
+height: 3px;
+background-color: aqua;
+transition: all 0.5s;
 }
 
 nav a:hover::before {
-  width: 100%;
+width: 100%;
 }
 
-  
-  #btn{
-    width: 180px;
-    height: 50px;
-    border-radius: 10px;
-    background-color: var(--bg-color) ;
-    margin-top: 20px;
-    border: 2px solid var(--bg-color);
-    font-weight: 400;
-    font-size: 20px;
-  }
-  
-  
-  main .intro{
-    width: 600px;
-    margin-top: 250px;
-    animation: moving ;
-    position: relative;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-    font-size: 20px;
-  
-  }
-  .intro #p1{
-    font-size: 45px;
-  }
-  .intro #p2{
-    margin-top: 25px;
-  }
-  .intro #p3{
-   font-size: 35px;
-  }
 
-  #skills{
-    background-color: var(--second-color);
-    padding-bottom:100px;
-    padding-top: 60px;
-    margin-top: 140px;
-  }
-
-  .skills{
-    width: 80%;
-    margin-top: 50px;
-    display: flex;
-    margin-left: 10%;
-  }
-  
-  
-  .skills .container{
-    width: 40%;
-    height: 300px;
-    border: 2px solid var(--bg-color);
-    padding: 30px;
-    border-radius: 30px;
-  }
-  
-  .skills .box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  
-  
-  .skills .card{
-    width:5rem;
-    height: 60px;
-    margin-bottom: 5px;
-    margin-top: 30px;
-  }
-  
-  .skills #tools{
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-  }
-  
-  .card img{
-    height: 170px;
-  }
-  
-  #img{
-    height: 58px;
-  }
-  
-  .education{
-    margin-top:80px;
-    margin-left: 25%;
-    font-weight:200;
-    word-spacing: 5px;
-  }
-  
-  .education .content{
-    padding: 0px 30px;
-    border-left: 2px solid rgb(18, 207, 240);
-    margin-top:-10px ;
-  }
-  
-  .education .content .para{
-    width: 700px;
-    position: relative;
-    padding: 20px;
-    border: 1px solid rgb(18, 207, 240);
-    background-color:#151925;
-    cursor: pointer;
-    transition: all 0.4s;
-  }
-  
-  .education .content .para:hover{
-    box-shadow: 0px 3px 12px 0px rgb(18, 207, 240);
-    border: 1px solid transparent;
-  }
-  
-  .education .content .para::before{
-      content: '';
-      position: absolute;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      right: calc(100% + 22px);
-      top:0;
-      background-color:rgb(18, 207, 240);
-      border: 2px solid rgb(18, 207, 240);
-  }
-  .education h2{
-    margin-left: 25%;
-    padding-bottom: 20px;
-  }
-  .education h3{
-    padding-bottom:15px;
-  }
-  .education p{
-    font-size: 20px;
-    font-weight: 400;
-  }
-  span{
-    color: aqua;
-  }
-   
-  .aboutme{
-    background-color: #323846;
-    color: white;
-    height: 550px;
-    margin-top: 100px;
-  }
-  .aboutme .para{
-    width: 50%;
-    font-size: 21px; 
-    padding-top:70px;
-    animation: magic;
-    animation-timeline:view() ;
-    animation-duration: 3s;
-    animation-range: entry cover 70%;
-    animation-fill-mode: forwards;
-  }
-  .aboutme .para p{
-    padding-top: 40px;
-    font-weight:400;    
-  }
-  .aboutme .para h2{
-    font-size: 50px;
-  }
-
-  @keyframes magic {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-        margin-left: 15%;
-    }
-  }
-  .project{
-    margin-top: 90px;
-  }
-  .project h2{
-    margin-left: 45%;
-    font-weight: 600;
-  }
-  .project .card{
-    margin-left: 39%;
-    width: 300px;
-    height: 250px;
-    margin-top: 50px;
-  }
-  .project .card img{
-    height: 250px;
-  }
-  .project .card-body{
-    border:2px solid var(--bg-color);
-  }
-  .project .btn{
-    background-color: var(--bg-color);
-    font-weight: bold;
-  }
-  footer{
-   margin-top: 300px;
-   background-color: var(--second-color);
-   padding-bottom:1px ;
-   padding-top: 15px;
-  }
-  footer h5{
-    color: white;
-    margin-left: 46%;
-  }
-  .icons{
-    margin-left:39%;
-    display: flex;
-    column-gap: 50px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-  }
-  .icons box-icon{
-   height: 40px;
-   width: 40px;
-   background-color:var(--bg-color);
-   padding:10px ;
-   border-radius: 50%;
-   }
-   .icons p{
-    color: var(--bg-color);
-    margin-top: 5px;
-   }
-
-  .icons box-icon:hover{
-    box-shadow: 0 0 20px var(--bg-color);
-    scale: 1.1;
-  }
-
-  @keyframes moving{
-   100%{
-      margin-left: 15%;
-   }
-  }
-  
-  @media (max-width:980px){
-  
-  nav{
-    height: auto;
-  }
-  nav button{
-    height: 70px;
-    width: 80px;
-  }
-  nav li{
-    font-size: 30px; 
-  }
-  nav ul{
-    background-color: var(--main-color); 
-  }
-  main .intro{
-    width: 750px;
-  }
-  .intro p{
-    font-size:40px;
-  }
-  .intro #p1{
-    font-size: 65px;
-    font-weight: 500;
-  }
-  .intro #p3{
-    font-size: 45px;
-   }
-  .intro #p2{
-    font-size: 35px
-  }
-  #btn{
-    height: 80px;
-    width: 300px;
-    font-size: 30px;
-    font-weight: 400px;
-  
-  }
-  .icons box-icon{
-    height: 60px;
-    width: 60px;
-    margin-top: 20px;
-  }
-  
-  #skills{
-    background-color: var(--second-color);
-    width:1000px;
-    
-  }
-  .skills{
-    display: grid;
-    grid-template-columns: 1fr;
-    row-gap: 80px;
-  }
-  .skills .container{
-    width: 800px;
-    height: 500px;
-   }
-  #sk{
-    font-size: 60px;
-  }
-  .box .card{
-    width:180px;
-    height: 130px;
-  }
-  .card img{
-    height: 130px;
-    width: 180px;
-    border: 2px solid white;
-  }
-  
-  #img{
-    height: 130px;
-    width: 180px;
-  }
-  .skills .box{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-left: 20px;
-    background-color: var(#323846);
-  }
-  .skills h3{
-    font-size: 40px;
-  }
-  .education{
-    margin-left: 30%;
-  }
-  .education p{
-    font-size: 32px;
-  }
-  .education h3{
-    font-size: 35px;
-  }
-  #jo{
-    font-size: 60px;
-    margin-left: 80%;
-    margin-top: 100px;
-  }
- .aboutme{
-  width: 1000px;
-  height: 700px;
- } 
- .aboutme .para{
-  width: 80%;
-  font-size: 28px;
+#btn{
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: var(--bg-color) ;
+  margin-top: 20px;
+  border: 2px solid var(--bg-color);
   font-weight: 400;
+  font-size: 20px;
+}
+
+
+main .intro{
+  width: 600px;
+  margin-top: 250px;
+  animation: moving ;
+  position: relative;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  font-size: 20px;
+
+}
+.intro #p1{
+  font-size: 45px;
+}
+.intro #p2{
+  margin-top: 25px;
+}
+.intro #p3{
+ font-size: 35px;
+}
+
+#skills{
+  background-color: var(--second-color);
+  padding-bottom:100px;
+  padding-top: 60px;
+  margin-top: 140px;
+}
+
+.skills{
+  width: 80%;
+  margin-top: 50px;
+  display: flex;
   margin-left: 10%;
- }
- @keyframes magic {
+}
+
+
+.skills .container{
+  width: 40%;
+  height: 300px;
+  border: 2px solid var(--bg-color);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.skills .box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+
+.skills .card{
+  width:5rem;
+  height: 60px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+}
+
+.skills #tools{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.card img{
+  height: 170px;
+}
+
+#img{
+  height: 58px;
+}
+
+.education{
+  margin-top:80px;
+  margin-left: 25%;
+  font-weight:200;
+  word-spacing: 5px;
+}
+
+.education .content{
+  padding: 0px 30px;
+  border-left: 2px solid rgb(18, 207, 240);
+  margin-top:-10px ;
+}
+
+.education .content .para{
+  width: 700px;
+  position: relative;
+  padding: 20px;
+  border: 1px solid rgb(18, 207, 240);
+  background-color:#151925;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.education .content .para:hover{
+  box-shadow: 0px 3px 12px 0px rgb(18, 207, 240);
+  border: 1px solid transparent;
+}
+
+.education .content .para::before{
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: calc(100% + 22px);
+    top:0;
+    background-color:rgb(18, 207, 240);
+    border: 2px solid rgb(18, 207, 240);
+}
+.education h2{
+  margin-left: 25%;
+  padding-bottom: 20px;
+}
+.education h3{
+  padding-bottom:15px;
+}
+.education p{
+  font-size: 20px;
+  font-weight: 400;
+}
+span{
+  color: aqua;
+}
+ 
+.aboutme{
+  background-color: #323846;
+  color: white;
+  height: 550px;
+  margin-top: 100px;
+}
+.aboutme .para{
+  width: 50%;
+  font-size: 21px; 
+  padding-top:70px;
+  animation: magic;
+  animation-timeline:view() ;
+  animation-duration: 3s;
+  animation-range: entry cover 70%;
+  animation-fill-mode: forwards;
+}
+.aboutme .para p{
+  padding-top: 40px;
+  font-weight:400;    
+}
+.aboutme .para h2{
+  font-size: 50px;
+}
+
+@keyframes magic {
   0%{
       opacity: 0;
   }
   100%{
       opacity: 1;
-      margin-left: 10%;
+      margin-left: 15%;
   }
+}
+.project{
+  margin-top: 90px;
+}
+.project h2{
+  margin-left: 45%;
+  font-weight: 600;
+}
+.project .card{
+  margin-left: 39%;
+  width: 300px;
+  height: 250px;
+  margin-top: 50px;
+}
+.project .card img{
+  height: 250px;
+}
+.project .card-body{
+  border:2px solid var(--bg-color);
+}
+.project .btn{
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+footer{
+ margin-top: 300px;
+ background-color: var(--second-color);
+ padding-bottom:1px ;
+ padding-top: 15px;
+}
+footer h5{
+  color: white;
+  margin-left: 46%;
+}
+.icons{
+  margin-left:39%;
+  display: flex;
+  column-gap: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.icons box-icon{
+ height: 40px;
+ width: 40px;
+ background-color:var(--bg-color);
+ padding:10px ;
+ border-radius: 50%;
+ }
+ .icons p{
+  color: var(--bg-color);
+  margin-top: 5px;
+ }
+
+.icons box-icon:hover{
+  box-shadow: 0 0 20px var(--bg-color);
+  scale: 1.1;
+}
+
+@keyframes moving{
+ 100%{
+    margin-left: 15%;
+ }
+}
+
+@media (max-width:980px){
+
+nav{
+  height: auto;
+}
+nav button{
+  height: 70px;
+  width: 80px;
+}
+nav li{
+  font-size: 30px;
+  margin-left: -30px;
+}
+nav ul{
+  background-color: var(--main-color); 
+  margin-left: 20px;
+}
+nav a{
+  text-decoration: none;
+}
+main .intro{
+  width: 750px;
+}
+.intro p{
+  font-size:40px;
+}
+.intro #p1{
+  font-size: 65px;
+  font-weight: 500;
+}
+.intro #p3{
+  font-size: 45px;
+ }
+.intro #p2{
+  font-size: 35px
+}
+#btn{
+  height: 80px;
+  width: 300px;
+  font-size: 30px;
+  font-weight: 400px;
+
+}
+.icons box-icon{
+  height: 60px;
+  width: 60px;
+  margin-top: 20px;
+}
+
+#skills{
+  background-color: var(--second-color);
+  width:1000px;
+  
+}
+.skills{
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 80px;
+}
+.skills .container{
+  width: 800px;
+  height: 500px;
+ }
+#sk{
+  font-size: 60px;
+}
+.box .card{
+  width:180px;
+  height: 130px;
+}
+.card img{
+  height: 130px;
+  width: 180px;
+  border: 2px solid white;
+}
+
+#img{
+  height: 130px;
+  width: 180px;
+}
+.skills .box{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 20px;
+  background-color: var(#323846);
+}
+.skills h3{
+  font-size: 40px;
+}
+.education{
+  margin-left: 30%;
+}
+.education p{
+  font-size: 32px;
+}
+.education h3{
+  font-size: 35px;
+}
+#jo{
+  font-size: 60px;
+  margin-left: 80%;
+  margin-top: 100px;
+}
+.aboutme{
+width: 1000px;
+height: 700px;
+} 
+.aboutme .para{
+width: 80%;
+font-size: 28px;
+font-weight: 400;
+margin-left: 10%;
+}
+@keyframes magic {
+0%{
+    opacity: 0;
+}
+100%{
+    opacity: 1;
+    margin-left: 10%;
+}
 }
 
 .project{
-  margin-left: 50%;
+margin-left: 50%;
 }
 .project h2{
-   font-size: 55px;
-   margin-left: 210px;
+ font-size: 55px;
+ margin-left: 210px;
 }
 .project h5{
-  font-size: 30px;
+font-size: 30px;
 }
 .project p{
-  font-size: 25px;
+font-size: 25px;
 }
 .project .card{
-  height: 300px;
-  width: 400px;
-  margin-left: 100px;
+height: 300px;
+width: 400px;
+margin-left: 100px;
 }
 .project .card-body{
-  width: 400px;
-  height: 400px;
+width: 400px;
+height: 400px;
 }
 .project .btn{
-   width: 150px;
-   height: 50px;
-   font-size: 20px;
-   font-weight: bold;
+ width: 150px;
+ height: 50px;
+ font-size: 20px;
+ font-weight: bold;
 }
 .project .card img{
-  height: 300px;
-  width: 400px;
+height: 300px;
+width: 400px;
 }
 
 footer{
-  width: 1000px;
+width: 1000px;
 }
 .icon-wrap{
-  margin-left: -10%;
+margin-left: -10%;
 }
 .icon-wrap h5 {
-  font-size: 35px;
+font-size: 35px;
 }
 .icon-wrap p{
-  margin-top: 30px;
-  font-size: 25px;
+margin-top: 30px;
+font-size: 25px;
 }
 .icons{
-  margin-left: 35%;
+margin-left: 35%;
+}
+
+}
+
+
+@media (min-width:2000px) {
+
+nav li{
+   font-size: 45px;
+   padding: 20px;
+   height: 120px;
+ }
+ nav ul {
+   column-gap: 100px;
+ }
+ .intro #p1{
+   font-size: 80px;
+ }
+ .intro #p2{
+   margin-top:55px;
+ }
+ .intro #p3{
+  font-size: 65px;
+ }
+ main .intro{
+   margin-top: 500PX;
+   width: 45%;
+   font-size:40px;
+ }
+ .intro #btn{
+   height: 100px;
+   width: 300px;
+   font-size: 40px;
+   font-weight: 400;
+   margin-top: 40px;
+ }
+ #skills{
+   margin-top: 400PX;
+   height: 80%;
+   padding-bottom: 200px;
+ }
+ .skills .container{
+   width: 40%;
+   height: 600px;
+   margin-top: 50px;
+  }
+ #sk{
+   font-size: 60px;
+ }
+ .skills .card{
+   width:9rem;
+   height: 100px;
+   margin-bottom: 5px;
+   margin-top: 60px;
+ }
+ 
+ .skills #tools{
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+ }
+ 
+ .card img{
+   height: 210px;
+ }
+ 
+ #img{
+   height: 100px;
+ }
+ .skills h3{
+   font-size: 50px;
+ }
+
+ .education{
+   margin-top:130px;
+   margin-left: 35%;
+   font-weight:200;
+   word-spacing: 5px;
+   height:70%;
+ }
+ 
+ .education .content .para{
+   width: 800px;
+   position: relative;
+   padding: 40px;
+   border: 1px solid rgb(18, 207, 240);
+   background-color:#151925;
+   cursor: pointer;
+   transition: all 0.4s;
+   height: 370px;
+ }
+ .education h2{
+   margin-left: 17%;
+   padding-bottom: 40px;
+   font-size: 60px;
+  }
+
+ .education h3{
+   padding-bottom:15px;
+   font-size: 40px;
+ }
+ .education p{
+   font-size: 35px;
+   font-weight: 400;
+ }
+ .aboutme{
+   height: 900px;
+ }
+ .aboutme .para p{
+   padding-top: 80px;
+   font-weight:400;    
+   font-size: 40px;
+ }
+ .aboutme .para h2{
+   font-size: 70px;
+ }
+ 
+ .project{
+   margin-top: 90px;
+ }
+ .project h2{
+   margin-left: 45%;
+   font-weight: 600;
+ }
+ .project .card{
+   margin-left: 39%;
+   width: 500px;
+   height: 350px;
+   margin-top: 50px;
+ }
+ .project .card img{
+   height: 350px;
+ }
+ .project .card-body{
+   height: 350px;
+   padding: 30px;
+   font-size: 30px;
+ }
+ .project h2{
+   font-size: 55px;
+   margin-left: 45%;
+ }
+
+.icons{
+  margin-left:39%;
+  display: flex;
+  column-gap: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  height:100px;
+}
+.icons box-icon{
+ height: 60px;
+ width: 60px;
+ background-color:var(--bg-color);
+ padding:10px ;
+ border-radius: 50%;
+ }
+ .icons p{
+   font-size: 30px;
+ }
+ .icon-wrap{
+   margin-top: 40px;
+ }
+ .icon-wrap h5{
+   font-size: 40px;
+   padding-bottom:20px ;
+ }
+ section{
+   scroll-margin-top: 270px; 
+  }
+  
+  main .intro{
+   scroll-margin-top:400px;
+  }
+
 }
  
-}
-  
