@@ -3,6 +3,11 @@ body{
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+.sriracha-regular {
+  font-family: "Sriracha", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
 section{
 scroll-margin-top: 100px; 
 }
@@ -28,7 +33,7 @@ color: white !important;
 }
 
 nav ul{
-  margin-left: 19%;
+  margin-left: 22%;
 }
 
 nav li {
@@ -70,7 +75,7 @@ width: 100%;
 
 main .intro{
   width: 600px;
-  margin-top: 250px;
+  margin-top: 230px;
   animation: moving ;
   position: relative;
   animation-duration: 2s;
@@ -79,13 +84,13 @@ main .intro{
 
 }
 .intro #p1{
-  font-size: 45px;
+  font-size: 50px;
 }
 .intro #p2{
-  margin-top: 25px;
+  font-size: 20px;
 }
 .intro #p3{
- font-size: 35px;
+ font-size: 40px;
 }
 
 #skills{
@@ -202,9 +207,10 @@ span{
   width: 50%;
   font-size: 21px; 
   padding-top:70px;
+  margin-left: 10%;
   animation: magic;
   animation-timeline:view() ;
-  animation-duration: 3s;
+  animation-duration: 5s;
   animation-range: entry cover 70%;
   animation-fill-mode: forwards;
 }
@@ -220,9 +226,12 @@ span{
   0%{
       opacity: 0;
   }
+  50%{
+    opacity: 0.5;
+  }
+
   100%{
       opacity: 1;
-      margin-left: 15%;
   }
 }
 .project{
@@ -283,7 +292,14 @@ footer h5{
 }
 
 @keyframes moving{
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.5;
+  }
  100%{
+   opacity: 1;
     margin-left: 15%;
  }
 }
