@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, user-scale=false">
   <title>Document</title>
   <link rel="stylesheet" href="stylepro.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&family=Sriracha&display=swap" rel="stylesheet">
@@ -62,14 +63,14 @@
    </section>
    
    <section id="skills">
-    <h2 class="text-white text-center" id="sk">Skills</h2>
+    <h2 class="text-white text-center" data-aos="fade-down" id="sk">Skills</h2>
     <div class="skills" >
  
-     <div class="container">
+     <div class="container" data-aos="fade-right"  data-aos-easing="ease-in-sine">
      
      <h3 class="text-white text-center"><span style="text-shadow: 0 0 2px aqua;">Technical</span></h3>
  
-     <div class="box" style="padding-left: 20px;">
+     <div class="box"  data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-in-sine" style="padding-left: 20px;">
      
      <div class="card">
      <img src="html.jpg" alt="">
@@ -91,10 +92,9 @@
      </div>
  </div>
  </div>
-  
-   <div class="container">
+   <div class="container" data-aos="fade-left"  data-aos-easing="ease-in-sine">
    <h3 class="text-white text-center"><span style="text-shadow: 0 0 2px aqua;">Tools</span></h3>
-   <div class="box" id="tools">
+   <div class="box" id="tools"  data-aos="fade-in" data-aos-duration="2000" data-aos-easing="ease-in-sine">
        <div class="card">
        <img src="vs.png" id="img"  alt="">
        </div>
@@ -131,9 +131,9 @@
    </section>
 
    <section class="aboutme" id="aboutme">
-    <div class="para">
-      <h2><span>About Me</span></h2>
-          <p>I'm Hariharan, a driven web developer proficient in HTML, CSS, JavaScript, and adept in React.js.
+    <div class="para" >
+      <h2 data-aos="fade-left"><span>About Me</span></h2>
+          <p data-aos="fade-right">I'm Hariharan, a driven web developer proficient in HTML, CSS, JavaScript, and adept in React.js.
            I excel in designing and developing user-friendly interfaces that seamlessly blend creativity with functionality.
           With a passion for innovation, I leverage React.js to create dynamic and responsive web applications. 
           I thrive on solving challenges and delivering high-quality web solutions.
@@ -144,7 +144,7 @@
 
    <section class="project" id="project">
      <h2 class="text-white">Project</h2>
-     <div class="card">
+     <div class="card" data-aos="zoom-in">
       <img src="project2.jpeg" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title text-white ">Healthlink Pro</h5>
@@ -163,7 +163,7 @@
   <div class="icons">
      <p>+91 9342739243</p>
     <a href="#"><box-icon name='gmail' type='logo' ></box-icon></a>
-    <a href="https://www.linkedin.com/in/hariharan-ms-84729326a."><box-icon name='linkedin' type='logo' ></box-icon></a>
+    <a href="https://www.linkedin.com/in/ms-hariharan"><box-icon name='linkedin' type='logo' ></box-icon></a>
   </div>
   </div>
 </footer>
@@ -173,6 +173,10 @@
 <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
 <script>
 
 window.onload = function() {
